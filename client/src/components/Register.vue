@@ -1,9 +1,14 @@
 <template>
-  <v-layout column>
+  <v-layout row>
     <v-flex xs6 offset-xs3>
       <div class="white elevation-2">
-        <v-toolbar flat dense class="cyan" dark>
-          <v-toolbar-title>注册</v-toolbar-title>
+        <v-toolbar 
+          flat 
+          dense 
+          class="blue" 
+          dark
+        >
+          <v-toolbar-title center>注册</v-toolbar-title>
         </v-toolbar>
         <div class="pl-4 pr-4 pt-2 pb-2">
           <input 
@@ -21,7 +26,11 @@
           <div class="error" v-html="error" />
           <br>
           <v-btn
-            class="cyan"
+            class="blue"
+            dark
+            block
+            round
+            center
             @click="register">
             注册
           </v-btn>
