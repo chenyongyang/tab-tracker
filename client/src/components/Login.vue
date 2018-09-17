@@ -9,7 +9,7 @@
             class="blue" 
             dark
           >
-            <v-toolbar-title>注册</v-toolbar-title>
+            <v-toolbar-title>登录</v-toolbar-title>
           </v-toolbar>
           <div class="pl-4 pr-4 pt-2 pb-2">
             <v-text-field
@@ -29,8 +29,8 @@
               block
               round
               dark
-              @click="register">
-              注册
+              @click="login">
+              登录
             </v-btn>
           </div>
         </div>
@@ -49,9 +49,9 @@ export default {
     }
   },
   methods: {
-    async register () {
+    async login () {
       try {
-        await AuthenticationService.register({
+        await AuthenticationService.login({
           email: this.email,
           password: this.password
         })
